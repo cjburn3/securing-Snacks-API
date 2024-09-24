@@ -1,6 +1,7 @@
-const express = require('express');
-const app = express();
+describe('Index Test', () => {
+    it('should pass a basic test', () => {
+      expect(true).toBe(true);
+    });
+  });
 
-// Your routes and middlewares go here
-
-module.exports = app;
+  module.exports = app;

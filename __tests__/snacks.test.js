@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../index'); // Adjust this path if your app is in a different file
+const app = require('../index'); // Ensure the path is correct
 
 describe('Snacks API', () => {
   it('should fetch all snacks', async () => {
@@ -8,13 +8,3 @@ describe('Snacks API', () => {
     expect(response.body).toBeDefined();
   });
 });
-
-const express = require('express');
-const router = express.Router();
-
-// Define your snack routes here
-router.get('/', (req, res) => {
-  res.json({ message: 'All snacks' });
-});
-
-module.exports = router;
