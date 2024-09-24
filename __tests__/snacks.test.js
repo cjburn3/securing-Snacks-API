@@ -8,3 +8,13 @@ describe('Snacks API', () => {
     expect(response.body).toBeDefined();
   });
 });
+
+const express = require('express');
+const router = express.Router();
+
+// Define your snack routes here
+router.get('/', (req, res) => {
+  res.json({ message: 'All snacks' });
+});
+
+module.exports = router;
