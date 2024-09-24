@@ -1,12 +1,12 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 const snacksRouter = require('./routes/snacks');
+const apiKeyMiddleware = require('./middleware');
 
 app.use(express.json());
+app.use(apiKeyMiddleware);
 app.use('/snacks', snacksRouter);
-
-app.get('/snacks', (req, res) => {
-  res.status(200).json({ message: 'Here are your snacks' });
-});
 
 module.exports = app;
