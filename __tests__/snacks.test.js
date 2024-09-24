@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../index'); // Ensure the path is correct
+const app = require('../index');
 
 describe('Snacks API', () => {
   it('should fetch all snacks', async () => {
